@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+*{
+
+  margin: 0;
+  padding: 0;
+  /*height: ;*/
+  overflow: auto;
+
+}
+body{    
+    font-family: 'Varela Round', sans-serif;
+    overflow: auto;
+    
+}
+a:hover{
+  text-decoration:none;
+  color:#FFD800;
+}
+
+.logo {
+  width: 100%;
+  font-size: 34px;
+  font-weight: 800;
+  color:#FFD800;
+  text-decoration: none;
+  left:40px;
+  display:inline-block;
+  margin-top: 33px;
+  line-height: 1;
+  margin-bottom: 10px;
+  
+}
+
+.mobile-app-banner{
+    
+    background-color: #5a6575;
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    width: auto;
+    background-repeat: no-repeat;
+ 
+}
+
+.mobile-app-banner-content{
+  height: auto;
+width: auto;
+    color: white;
+    margin-top: auto;
+
+}
+
+.mobile-app-banner-content h1{
+    
+    font-size: 56px;
+    color: #800866;
+    font-weight: 600;    
+    
+}
+
+
+.mobile-app-banner-content p{
+  height: auto;
+  width: auto;
+    font-size:20px;
+    color:black;
+    line-height: 30px;
+    margin: 40px 0px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 2px 3px;
+    margin-bottom: 0;
+    outline: none;
+    font-weight: normal;
+    line-height: 1.42;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    border-image: 4px;
+    background-color:#74de0b; 
+    color: white;
+    font-weight: 600 !important;
+    margin-right: 10px;
+    font-size: 18px;
+    
+}
+.buttons .btn{
+    padding: 18px 40px;
+    margin-bottom: 20px;
+    margin-right: 13px;
+    outline: none;
+}
+
+.btn:hover {
+  background-color:#e08210;
+}
+
+
+.userbt{
+  font-size: 28px;
+  color: green;
+  padding-bottom: 18px 40px;
+  margin: 0;
+}
