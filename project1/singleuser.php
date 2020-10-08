@@ -71,7 +71,7 @@ body
      <a href="index.php"><h3>Contact</h3></a>
 </div> -->
 <?php
-$con =mysqli_connect("localhost","root","","project");
+$con =mysqli_connect("localhost","id14985521_bhargav","Annagirisai7013910008_","id14985521_project");
 if(isset($_POST['details']))
 {
 	$name = $_POST['name'];
