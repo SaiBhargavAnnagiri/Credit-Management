@@ -325,22 +325,9 @@ button[type=submit] {
         <div class="col-75">
           <input class="form-control amountText" type="number" name="amount" min=1 autocomplete="off">
         </div>
-        <!-- <div class="col-75">
-          <select id="country" name="country">
-            <option value="australia">Australia</option>
-            <option value="canada">Canada</option>
-            <option value="usa">USA</option>
-          </select>
-        </div> -->
+        
       </div>
-      <!-- <div class="row">
-        <div class="col-25">
-          <label for="subject">Subject</label>
-        </div>
-        <div class="col-75">
-          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-        </div>
-      </div> -->
+      
       <div class="buttons" > 
         <button type="submit" class="btn1" name="submit" value="submit" style="background-color:steelblue">Transfer</button> 
         <!-- <input class="btn1" type="submit" value="Submit" name="useradd" > -->
