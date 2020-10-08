@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+    <!--<meta name="HandheldFriendly" content="true">-->
 	<title>Add user</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 <!--   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
@@ -25,7 +28,8 @@ label {
 }
 
 input[type=submit] {
-  background-color: #4CAF50;
+    margin-right:27vw;
+  background-color: steelblue;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -42,6 +46,9 @@ input[type=submit]:hover {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
+  width: 50%;
+    margin-left: 22%;
+    background-color: darkslategray;
 }
 
 .col-25 {
@@ -64,14 +71,89 @@ input[type=submit]:hover {
 }
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 728px) {
   .col-25, .col-75, input[type=submit] {
     width: 100%;
     margin-top: 0;
   }
+  .buttons{
+    align-content: center;
+    padding-top: 20px;
+    width:40vw;
+}
+input[type=submit] {
+    /*width:27vw;*/
+    margin:auto;
+  background-color: steelblue;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+.buttons a {
+        padding: 11px;
+    margin-left: 6%;
+    margin-top: 5%;
+    border-radius: 4px;
+    background-color: steelblue;
+    text-decoration: none;
+    display: inline-block;
+    padding:11px 16px;
+    margin-bottom: 0;
+    outline: none;
+    font-weight: normal;
+    line-height: 1.42;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    border-image: 4px;
+    background-color:steelblue; 
+    color: white;
+    font-weight: 600 !important;
+    margin-right: 10px;
+    font-size: 18px;
+    
+}
+.btn1{
+    
+    margin-right: 46%;
+    background-color: steelblue;
+    display: inline-block;
+    padding: 8px 16px;
+    margin-bottom: 0;
+    outline: none;
+    font-weight: normal;
+    line-height: 1.42;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    border-image: 4px;
+     
+    color: white;
+    font-weight: 600 !important;
+    margin-right: 10px;
+    font-size: 18px;
+    
 }
 
+}
 
+.buttons{
+    align-content: center;
+    padding-top: 20px;
+}
 
 
 *{
@@ -80,6 +162,8 @@ input[type=submit]:hover {
   padding:0px;
 }
 .btn1{
+    margin-right: 46%;
+    background-color: steelblue;
     display: inline-block;
     padding: 8px 16px;
     margin-bottom: 0;
@@ -103,9 +187,15 @@ input[type=submit]:hover {
     
 }
 
-.btn{
+.btn2{
+        padding: 11px;
+    margin-left: 30%;
+    margin-top: -9%;
+    border-radius: 4px;
+    background-color: steelblue;
+    text-decoration: none;
     display: inline-block;
-    padding:11px 16px;
+    padding:12px 16px;
     margin-bottom: 0;
     outline: none;
     font-weight: normal;
@@ -117,9 +207,9 @@ input[type=submit]:hover {
     user-select: none;
     background-image: none;
     border: 1px solid transparent;
-    border-radius: 31px;
+    border-radius: 4px;
     border-image: 4px;
-    background-color:#74de0b; 
+    background-color:steelblue; 
     color: white;
     font-weight: 600 !important;
     margin-right: 10px;
@@ -171,8 +261,7 @@ input[type=submit]:hover {
 
 
 
-  <div class="container" style="width: 50%;
-    margin-left: 22%;background-color: darkslategray">
+  <div class="container" >
   <form action="add.php" method = "post" align="center" position='fixed' autocomplete="off">
   <div class="useradd">
     <div class="col-25">
@@ -213,11 +302,12 @@ input[type=submit]:hover {
       <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
     </div>
   </div> -->
-  <div class="" style="align-content: center;padding-top: 20px"> 
-    <input class="btn1" type="submit" value="Submit" name="useradd" style="margin-right: 46%;background-color: steelblue">
-     <a href="index.html" class="btn" style="margin-left: 60%;margin-top: -9%;border-radius: 4px; background-color: steelblue;text-decoration: none;padding-top: 11px 6px">Home page</a>
+  <div class="buttons" > 
+    <input class="btn1" type="submit" value="Submit" name="useradd" >
+     <a href="index.html" class="btn2" >Home</a>
   </div>
   </form>
+  
 </div>
 
 </div>
