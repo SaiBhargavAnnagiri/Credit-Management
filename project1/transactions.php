@@ -1,190 +1,355 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html>
-
 <head>
-    <title>Users-page</title>
-    <link rel="icon" type="image/png" href="transfer1.png" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style2.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <?php
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+    <!--<meta name="HandheldFriendly" content="true">-->
+  <title>Add user</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+<!--   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
+ -->
+   <?php
         include("connection.php");
 
         
         
         ?>
-        
-        <style type="text/css">
+<style type="text/css">
+<style>
+* {
+  box-sizing: border-box;
+}
 
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
 
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
 
-          body{
-      background-image: 
-      url("");
-      background-color: darkslategray;
-      background-height: 1%;
-      background-width: 1%;
-      margin-left: 60px
+button[type=submit] {
+    margin-right:27vw;
+  background-color: steelblue;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+button[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 50%;
+    margin-left: 22%;
+    background-color: darkslategray;
+}
+
+.col-25 {
+  float: left;
+  width: 13%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.amountText {
+      width: 590px;
+    height: 41px;
+    border-radius: 4px;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 728px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+  .buttons{
+    align-content: center;
+    padding-top: 20px;
+    width:40vw;
+}
+button[type=submit] {
+    /*width:27vw;*/
+    margin:auto;
+  background-color: steelblue;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+.buttons a {
+        padding: 11px;
+    margin-left: 6%;
+    margin-top: 5%;
+    border-radius: 4px;
+    background-color: steelblue;
+    text-decoration: none;
+    display: inline-block;
+    padding:11px 16px;
+    margin-bottom: 0;
+    outline: none;
+    font-weight: normal;
+    line-height: 1.42;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    border-image: 4px;
+    background-color:steelblue; 
+    color: white;
+    font-weight: 600 !important;
+    margin-right: 10px;
+    font-size: 18px;
+    
+}
+.btn1{
+    
+    margin-right: 46%;
+    background-color: steelblue;
+    display: inline-block;
+    padding: 8px 16px;
+    margin-bottom: 0;
+    outline: none;
+    font-weight: normal;
+    line-height: 1.42;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    border-image: 4px;
+     
+    color: white;
+    font-weight: 600 !important;
+    margin-right: 10px;
+    font-size: 18px;
+    
+}
 
 }
- .list-group{
-  width: auto;
-  height: auto;
- }
 
- .container{
-  padding: auto;
-  width: auto;
-  height: 100%;
- }
+.buttons{
+    align-content: center;
+    padding-top: 20px;
+}
 
+
+*{
+  height:auto;
+  overflow: hidden;
+  padding:0px;
+}
+.btn1{
+    margin-right: 46%;
+    background-color: steelblue;
+    display: inline-block;
+    padding: 8px 16px;
+    margin-bottom: 0;
+    outline: none;
+    font-weight: normal;
+    line-height: 1.42;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    border-image: 4px;
+    background-color:cornflowerblue; 
+    color: white;
+    font-weight: 600 !important;
+    margin-right: 10px;
+    font-size: 18px;
+    
+}
+
+.btn2{
+        padding: 11px;
+    margin-left: 30%;
+    margin-top: -9%;
+    border-radius: 4px;
+    background-color: steelblue;
+    text-decoration: none;
+    display: inline-block;
+    padding:12px 16px;
+    margin-bottom: 0;
+    outline: none;
+    font-weight: normal;
+    line-height: 1.42;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    border-image: 4px;
+    background-color:steelblue; 
+    color: white;
+    font-weight: 600 !important;
+    margin-right: 10px;
+    font-size: 18px;
+    
+}
+  .btndanger1{
+  display: inline-block;
+  border-radius: 4px;
+  width: 120px;
+  height: 30px;
+  background-color: darkblue;
+  font-size: 20px;
+  background-color: lightgreen;
+  padding: 0px;
+}
+.btndanger1:hover{
+  background-color: skyblue;
+  cursor: pointer;
+}
+/*#myTable{
+  margin: 40px; 
+  margin-left: 30%;
+}*/
+.myform{
+  outline: auto;
+  border-radius: 5px;
+  padding:0px;
+  width:37%;
+  height: 37px;
+  text-align: justify;
+}
 </style>
-
-
 </head>
-<body>
-  <h1 align="center" style="font-family: sans-serif;margin-right: 21%;font-size: 140%"> <p style="color: burlywood"> Transfer</p> </h1>
-    <?php
-   $query="SELECT * FROM users";
-   $data=mysqli_query($conn,$query);
-   $total=mysqli_num_rows($data);
+<body style="background-color: darkslategray;">
+  <h1 align="center" style="font-family: sans-serif;"> <p style="color: burlywood"> Transfer</p> </h1><br><br>
+  <!-- <div style="position: relative; top: 20px;" > -->
+    <!-- <div class="container">
+  <form width="auto" action="add.php" method = "post" align="center" position='fixed' autocomplete="off">
+    <div class="useradd">
+        <label for="name" style="margin-left: -6px;font-size: 20px;"> Name: </label> <input class="myform" type="text" style="font-size: 14px;font-style: oblique;" id="name" name="name" placeholder="Type your name here" required=""><br><br>
+        <label for="email" style="font-size: 20px;">Email:</label> <input class="myform" type="text" style="font-size: 14px;font-style: oblique;" id="email" name="email" placeholder="Email" required=""><br><br>
+        <label for="credit" style="margin-left: -12px;font-size: 20px;">Credits: </label> <input class="myform" type="text" id="credit" name="credit" style="font-size: 14px;font-style: oblique;" placeholder="Credits" required=""><br><br>
+        <button class="btn1" type="submit" name="useradd">Create User</button>
+        </div>
+    </form>
+  </div> -->
 
-    if($total !=0)
-  { 
-?>
-    <div class="container">
-        <!-- <div class="list-group">
-            <?php
-    while($result =mysqli_fetch_assoc($data))
-    {
-     ?>
-            <a class="list-group-item list-group-item-action flex-column align-items-start"
-                           href='user_details.php?id=<?php echo $result['id']; ?>'>
-                <div class="chat_img"> <img src="profile.jpg" alt="chat_img"> </div>
-                <?php echo $result['name'];}
-    }
-     else
-    {
-    echo"No Record Found";
-    }
-    ?>
-            </a>
-        </div> -->
-        <?php
-   if (isset($_GET["id"])) { $id  = $_GET["id"]; } else { $id=0; };
-   $data=mysqli_query($conn,"SELECT * FROM users WHERE id=$id ");
-   $total=mysqli_num_rows($data);
-   $result =mysqli_fetch_array($data);
-?>
 
-       <!--  <div class="col-sm-6">
-            <div class="panel-heading">
-                <h3 class="panel-title">User Information :</h3>
-            </div>
-            <div class="panel-body">
-                <table class="table table-responsive table-user-information">
-                    <tbody>
-                        <tr>
-                            <td>Name:</td>
-                            <td>
-                                   <?php $val = isset($result['name']) ? $result['name'] : 0;
-                     echo $val;?>
 
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Account ID:</td>
-                            <td>
-                                <?php $val = isset($result['id']) ? $result['id'] : 0;
-                     echo $val;?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Email:</td>
-                            <td>
-                                <?php $val = isset($result['email']) ? $result['email'] : 0;
-                     echo $val;?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Credits</td>
-                            <td>
-                <?php $val = isset($result['credit']) ? $result['credit'] : 0;
-                     echo $val;?>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div> -->
 
-            
-            <br>
-            <form class="form-group" action="payment.php" method="post">
-                <?php
-   $query="SELECT name FROM users";
-   $data=mysqli_query($conn,$query);
-    ?>
-                <div class="col-sm-6">
-                    <label for="from" style="margin-left: 38%">Select User From:</label>
-                    <select class="form-control" style="width: 50%;height: 34px;margin-top: -6%;margin-left: 70%" name="from">
-                        <option value="null">Not Selected</option>
-                <?php 
-          while($result= mysqli_fetch_array($data))
-          {
-           echo "<option value='" . $result['name']. "'>" . $result['name'] . "</option>";
-            
-          }
-          ?>
-                    </select>
-                </div>
-
-            <?php
-   $query="SELECT name FROM users";
-   $data=mysqli_query($conn,$query);
+  <div class="container" >
+    <form action="payment.php" method = "post" align="center" position='fixed' autocomplete="off">
+                  <?php
+                   $query="SELECT name FROM users";
+                   $data=mysqli_query($conn,$query);
+                    ?>
+      <div class="useradd">
+        <div class="col-25">
+          <label for="name">Sender: </label>
+        </div>
+        <div class="col-75">
+         <select class="form-control" name="from">
+                          <option value="null">Not Selected</option>
+                            <?php 
+                              while($result= mysqli_fetch_array($data))
+                              {
+                               echo "<option value='" . $result['name']. "'>" . $result['name'] . "</option>";
                                 
-    ?>
-                <div class="col-sm-6 no-gutter">
-                    <label for="to" style="margin-left: -62%;margin-top: 61px">Select User To:</label>
-                    <select class="form-control" style="width: 50%;height: 34px;margin-top:-6% ;margin-left: -238px"   name="to">
-                        <option value="null">Not Selected</option>
-                        <?php 
-          while($result= mysqli_fetch_array($data))
-          {
-           echo "<option value='" . $result['name'] . "'>" . $result['name'] . "</option>";
-            
-          }
-          ?>
-                    </select>
-                </div>
-                <div class="col-sm-6">
-                    <label for="amount" style="margin-left: 54%;margin-top: 20px">Credits:</label>
-                    <input class="form-control" type="number" name="amount" min=1 autocomplete="off" style="width: 35%;height: 21px;margin-left:70% ;margin-top: -30px">
-                </div>
-                <br>
-                      
-                </div>
-                <div class="col-sm-6 nopadding">
-                    <br>
-                    <div class="buttons" style="margin-left: 200px">
-                        <button type="submit" class="btn" name="submit" value="submit" style="background-color:steelblue">Transfer credits</button>
-                       <!--  <a href="history.php " class="btn">Transcations List</a> -->
-                        <a href="index.html" class="btn" style="margin-left: 25%;background-color: steelblue;text-decoration: none;">Home Page</a>
-                    </div>
-                    </div>  
-               
-            </form>
-       <!-- <div >
-          <a href="index.html"><button class="backk">Back</button></a>
+                              }
+                              ?>
+          </select>
+        </div>
+      </div>
+                 <?php
+                   $query="SELECT name FROM users";
+                   $data=mysqli_query($conn,$query);
+                                                
+                    ?>
+      <div class="row">
+        <div class="col-25">
+          <label for="email">Receiver: </label>
+        </div>
+        <div class="col-75">
+          <select class="form-control" name="to">
+                          <option value="null">Not Selected</option>
+                          <?php 
+                            while($result= mysqli_fetch_array($data))
+                            {
+                             echo "<option value='" . $result['name'] . "'>" . $result['name'] . "</option>";
+                              
+                            }
+                            ?>
+                      </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="credit">Credits: </label>
+        </div>
+        <div class="col-75">
+          <input class="form-control amountText" type="number" name="amount" min=1 autocomplete="off">
+        </div>
+        <!-- <div class="col-75">
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+        </div> -->
+      </div>
+      <!-- <div class="row">
+        <div class="col-25">
+          <label for="subject">Subject</label>
+        </div>
+        <div class="col-75">
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        </div>
+      </div> -->
+      <div class="buttons" > 
+        <button type="submit" class="btn1" name="submit" value="submit" style="background-color:steelblue">Transfer</button> 
+        <!-- <input class="btn1" type="submit" value="Submit" name="useradd" > -->
+         <a href="index.html" class="btn2" >Home</a>
+      </div>
+    </form>
+  
+</div>
 
-       </div> -->
-
-
-
-    </div>
- 
+</div>
 </body>
-
 </html>
