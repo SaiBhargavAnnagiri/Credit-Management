@@ -84,7 +84,7 @@ body
 	  <select name="email">
                    		<option>Select</option>
                         <?php
-                        $con =mysqli_connect("localhost:3306","root","","credit");
+                        $con =mysqli_connect("localhost","id14985521_bhargav","Annagirisai7013910008_","id14985521_project");
 						$sql = "SELECT * FROM transfer";  
 						$result = mysqli_query($con, $sql);
                             while ($row=mysqli_fetch_array($result)){
