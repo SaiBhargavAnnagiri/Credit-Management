@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Transaction History</title>
   <style type="text/css">
 *{
@@ -66,8 +67,8 @@ body{
  <div align="
   center" style="color: aqua">
     <?php
-$con =mysqli_connect("localhost","root","","project");
-$sql = "SELECT * FROM history";  
+$con =mysqli_connect("localhost","id14985521_bhargav","Annagirisai7013910008_","id14985521_project");
+$sql = "SELECT * FROM history where sender!=receiver";  
 $result = mysqli_query($con, $sql);
 echo " <table border='2' style='border: 3px solid black;margin-left:17%' align='center' width='50%;'>
           <tr style='color: burlywood;'>
