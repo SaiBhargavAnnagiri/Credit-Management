@@ -62,6 +62,43 @@ body
   background-color: darkslategray;
   background-size: cover;
 }
+.buton{
+    width: 10%;
+    background-color: steelblue;
+}
+@media (max-width:768px){
+    buton{
+    width: 25%;
+    background-color: steelblue;
+}
+input[type="submit"]{
+    width:25%;
+}
+.btn{
+    margin-top:15px;
+    display: inline-block;
+    padding: 0px 9px;
+    margin-bottom: 0;
+    outline: none;
+    font-weight: normal;
+    line-height: 1.42;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    border-image: 4px;
+    background-color:#74de0b; 
+    color: white;
+    font-weight: 600 !important;
+    margin-right: 10px;
+    font-size: 18px;
+    
+}
+}
 
   </style>
 </head>
@@ -77,7 +114,7 @@ body
   <div align="
   center" style="color: aqua">
     <?php
-$con =mysqli_connect("localhost","root","","project");
+$con =mysqli_connect("localhost","id14985521_bhargav","Annagirisai7013910008_","id14985521_project");
 $sql = "SELECT * FROM users";  
 $result = mysqli_query($con, $sql);
 echo "<table border='2' style='border: 3px solid black;' align='center' width='50%'>
@@ -106,7 +143,7 @@ else {
     <select name="name" style="width: 15%">
                       <option>Select</option>
                         <?php
-                        $con =mysqli_connect("localhost","root","","project");
+                        $con =mysqli_connect("localhost","id14985521_bhargav","Annagirisai7013910008_","id14985521_project");
             $sql = "SELECT * FROM users";  
             $result = mysqli_query($con, $sql);
                             while ($row=mysqli_fetch_array($result)){
@@ -116,7 +153,7 @@ else {
                         ?>
 
                 </select>
-                <input type="submit" name="details" style="width: 6%;background-color: steelblue;" required="details">
+                <input type="submit" name="details" class="buton" required="details">
                  <a href="index.html" class="btn" style="background-color: steelblue;text-decoration: none;color: black;margin-left: 5%">Home</a>
                     
     </form>
